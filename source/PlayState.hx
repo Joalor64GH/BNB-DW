@@ -58,7 +58,7 @@ class PlayState extends FlxState
 	var offset:Int = 0;
 	// Sick, Good, Ok, Bad, Shit
 	var ratingSprite:FlxTypedSpriteGroup<RatingSprite>;
-	//* I coppied this into SongFinishedSubState so be careful
+	// I coppied this into SongFinishedSubState so be careful
 	var rankings = [15, 25, 40, 100];
 	var rankList:Array<Rank> = [];
 	var rankNames = ["sick", "good", "Bad", "Shit"];
@@ -68,13 +68,6 @@ class PlayState extends FlxState
 	var healthP1:HealthIcon;
 	var healthP2:HealthIcon;
 
-	/*
-		TODO: Add end-screen
-		TODO: Credits
-		TODO: Freeplay
-		TODO: Clean up
-
-	 */
 	override public function create()
 	{
 		super.create();
@@ -190,7 +183,7 @@ class PlayState extends FlxState
 						bird.playAnim('squawk');
 						bosip.playAnim('throw MISS');
 						bob.playAnim('grumpy');
-						changeHealth(-20);
+						changeHealth(-5);
 					}
 				}
 				if (conductor.getMil() > bird.time + bird.actionTime(3))
@@ -251,7 +244,7 @@ class PlayState extends FlxState
 						case 2:
 							changeHealth(-5);
 						case 3:
-							changeHealth(-10);
+							changeHealth(-5);
 					}
 				}
 			}
@@ -269,7 +262,7 @@ class PlayState extends FlxState
 		}
 		if (FlxG.keys.justPressed.F1)
 		{
-			FlxG.switchState(new PlayState());
+			FlxG.resetState();
 		}
 	}
 
@@ -325,7 +318,7 @@ class PlayState extends FlxState
 		FlxTween.tween(gameoverBlack, {alpha: 0}, 2, {
 			onComplete: (tween) ->
 			{
-				FlxG.switchState(new PlayState());
+				FlxG.resetState();
 			}
 		});
 	}

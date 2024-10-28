@@ -21,7 +21,9 @@ class Main extends openfl.display.Sprite
 	public function new()
 	{
 		super();
+		
 		addChild(new flixel.FlxGame(1280, 720, StartScreen, 60, 60, false, false));
+		addChild(new openfl.display.FPS(10, 10, 0xFFFFFF));
 
 		#if desktop
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, (e:UncaughtErrorEvent) -> {
