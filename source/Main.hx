@@ -11,8 +11,10 @@ import haxe.io.Path;
 import sys.io.Process;
 import sys.io.File;
 import sys.FileSystem;
-import backend.ALSoftConfig;
+import ALSoftConfig;
 #end
+
+using StringTools;
 
 class Main extends openfl.display.Sprite
 {
