@@ -101,9 +101,9 @@ class StartScreen extends FlxState
 	var right:Bool = true;
 	var startText:Array<String> = [
 		"Bob & Bosip Date Week",
-		"Made with love and care by:",
+		"Made with love and care by:\nTowster || Joalor64",
 		"Stole assets from FNF",
-		"Inspired by Rythm Heaven",
+		"Inspired by Rhythm Heaven",
 	];
 	var textBeatNum:Int;
 

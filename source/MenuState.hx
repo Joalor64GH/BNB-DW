@@ -91,7 +91,8 @@ class MenuState extends FlxState
 					confirmSound.play(true);
 					fade.goIn(new DialogueState());
 				case 1:
-					cancelSound.play(true);
+					fade.goIn(new CreditsState());
+					confirmSound.play(true);
 				case 2:
 					fade.goIn(new OptionsState());
 					confirmSound.play(true);
