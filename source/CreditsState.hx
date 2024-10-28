@@ -1,5 +1,6 @@
 package;
 
+import openfl.Assets;
 import towsterFlxUtil.TowPaths;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -7,6 +8,8 @@ import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import Alphabet;
+
+using StringTools;
 
 class CreditsState extends FlxState
 {
@@ -20,7 +23,7 @@ class CreditsState extends FlxState
 	{
 		super.create();
 
-		credits = TowPaths.getFile('credits', TXT);
+		credits = getText(TowPaths.getFile('credits', TXT));
 
 		BG = new FlxSprite(0, 0).loadGraphic(TowPaths.getFilePath('menus/menuBGPurple', PNG));
 		add(BG);
@@ -68,4 +71,7 @@ class CreditsState extends FlxState
             item.alpha = (item.targetY == 0) ? 1 : 0.6;
         }
     }
+
+    inline public static function getText(path:String):Array<String>
+		return Assets.exists(path) ? [for (i in Assets.getText(path).trim().split('\n')) i.trim()] : [];
 }
