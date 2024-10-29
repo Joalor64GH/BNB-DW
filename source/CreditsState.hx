@@ -55,19 +55,11 @@ class CreditsState extends FlxState
 
     private function changeSelection(change:Int = 0)
     {
-        curSelected += change;
+        curSelected = FlxMath.wrap(curSelected + change, 0, credits.length - 1);
 
-        if (curSelected < 0)
-            curSelected = credsGrp.length - 1;
-        if (curSelected >= credsGrp.length)
-            curSelected = 0;
-        
-        var something:Int = 0;
-
-        for (item in credsGrp.members)
+        for (num => item in credsGrp.members)
         {
-            item.targetY = something - curSelected;
-            something++;
+            item.targetY = num - curSelected;
             item.alpha = (item.targetY == 0) ? 1 : 0.6;
         }
     }
