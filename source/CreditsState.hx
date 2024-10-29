@@ -6,6 +6,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
+import flixel.math.FlxMath;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import Alphabet;
 
