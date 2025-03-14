@@ -1,7 +1,7 @@
 package;
 
 import towsterFlxUtil.Fade;
-import flixel.system.FlxSound;
+import flixel.sound.FlxSound;
 import flixel.text.FlxBitmapText;
 import flixel.FlxBasic;
 import flixel.tweens.FlxEase;

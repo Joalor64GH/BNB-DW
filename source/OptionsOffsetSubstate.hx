@@ -1,7 +1,7 @@
 package;
 
 import towsterFlxUtil.TowPaths;
-import flixel.system.FlxSound;
+import flixel.sound.FlxSound;
 import flixel.util.FlxSave;
 import flixel.FlxG;
 import flixel.FlxSubState;

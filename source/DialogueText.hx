@@ -1,7 +1,7 @@
 package;
 
 import towsterFlxUtil.TowPaths;
-import flixel.system.FlxSound;
+import flixel.sound.FlxSound;
 import haxe.Timer;
 import flixel.text.FlxText;
 

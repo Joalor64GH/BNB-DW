@@ -1,7 +1,7 @@
 package;
 
 import flixel.FlxG;
-import flixel.system.FlxSound;
+import flixel.sound.FlxSound;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import towsterFlxUtil.TowSprite;
