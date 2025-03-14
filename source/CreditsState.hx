@@ -24,7 +24,7 @@ class CreditsState extends FlxState
 	{
 		super.create();
 
-		credits = getText(TowPaths.getFile('credits', TXT));
+		credits = getText(TowPaths.getFilePath('credits', TXT));
 
 		BG = new FlxSprite(0, 0).loadGraphic(TowPaths.getFilePath('menus/menuBGPurple', PNG));
 		add(BG);

@@ -68,7 +68,6 @@ class Main extends openfl.display.Sprite
 			}
 			#end
 
-			FlxG.bitmap.dumpCache();
 			FlxG.bitmap.clearCache();
 
 			if (FlxG.sound.music != null)

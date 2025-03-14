@@ -2,7 +2,7 @@ package;
 
 import haxe.io.Path;
 
-@:keep class ALSoftConfig {
+@:keepInit class ALSoftConfig {
 	#if desktop
 	static function __init__():Void {
 		var origin:String = #if hl Sys.getCwd() #else Sys.programPath() #end;
